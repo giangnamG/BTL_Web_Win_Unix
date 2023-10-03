@@ -3,11 +3,7 @@
 {% block title %}edit user{% endblock %}
 
 {% block content %}
-<style>
-    .users{
-        margin-left: 82px;
-    }
-</style>
+
 <div class="container" action="/admin/partials/add_product.php" style="margin-top: 50px;">
     <form action="/admin/user/update" class="row g-3" method="POST">
     <div class="input-group">

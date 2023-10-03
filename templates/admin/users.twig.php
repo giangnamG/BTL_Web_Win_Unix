@@ -4,9 +4,6 @@
 
 {% block content %}
 <style>
-    .users{
-        margin-left: 82px;
-    }
 </style>
 <link href="/templates/assets/css/admin/user.css" rel="stylesheet"/>
 <hr>

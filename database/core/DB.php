@@ -75,6 +75,25 @@ class DB{
         }
     }
     
+    public static function search($tableName, $args) {
+        $conn = db::connect();
+        db::select_db($conn);
+
+        $columnName = $args[0];
+        $value      = $args[2];
+        $sql = "select * from $tableName where $columnName like '%$value%'";
+
+        try {
+            $stmt = $conn->query($sql);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            return $result;
+        }catch (PDOException $e){
+            echo "Connection failed: " . $e->getMessage();
+            http_response_code(500);
+            die();
+        }
+    }
     public static function selectAll($selector, $table) {
         if ($selector === '*') {
             $parameter = "*";

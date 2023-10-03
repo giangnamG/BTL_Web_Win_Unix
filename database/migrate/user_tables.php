@@ -9,6 +9,7 @@ class user_tables{
     public static function init(){
         $conn = DB::connect();
         $databaseName = core::db()['name'];
+        
         $sql = "USE $databaseName";
 
         $conn->exec($sql);

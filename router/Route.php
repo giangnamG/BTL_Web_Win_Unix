@@ -12,6 +12,7 @@ class Route{
         'women' => 1,
         'men' => 1,
         'accessories' => 1,
+        'search' => 1,
         'migrate' => 1,
         'seed' => 1,
         'migrateAndSeed' => 1,
@@ -27,6 +28,8 @@ class Route{
         'store' => 1,
         'delete' => 1,
         'changePermistion' => 1,
+        'product' => 1,
+        'create' => 1,
     ];
     public static $current_uri;
     public static $current_method;
@@ -42,6 +45,15 @@ class Route{
             if( $uriPart!=="" && !self::$routes[$uriPart]){
                 self::page404();
             }
+        $length = count($uriParts);
+        for ($i = 0; $i < $length; $i++){
+            for ($j = $i + 1; $j < $length; $j++){
+                if ($uriParts[$i] == $uriParts[$j]){
+                    unset($uriParts[$j]);
+                }
+            }
+        }
+        self::$current_uri = implode("/",$uriParts);
     }
     public static function get($path, $router)
     {

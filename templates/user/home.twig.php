@@ -218,21 +218,36 @@
 		<div class="container">
 			<div class="row">
 				<div id="category" class="col text-center">
-					<div class="section_title new_arrivals_title">
-						<h2>New Arrivals</h2>
+					<div class=" new_arrivals_title">
+						<h2>New Arrivals</h2><br>
 					</div>
+					<form class="form-inline my-2 my-lg-0" action="/home/search" method="POST" style="margin-right: 75px;margin-left: 400px;"">
+						<input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0 button" type="submit">Search</button>
+					</form>
+							<h3>{{ search_name }}</h3>							
 				</div>
+				
 			</div>
+
 			<div class="row align-items-center">
 				<div class="col text-center">
 					<div class="new_arrivals_sorting" >
 						<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
-							<form>
-								<button id="all" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*" name="category" value="all"><a style="color: white;" href="home/category/all">all</a></button>
-								<button id="women" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter=".women" type="submit" name="category" value="women"><a style="color: white;" href="home/category/women">women</a></button>
-								<button id="accessories" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter=".accessories" type="submit" name="category" value="accessories"><a style="color: white;" href="home/category/accessories">accessories</a></button>
-								<button id="men" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter=".men" type="submit" name="category" value="men"><a style="color: white;" href="home/category/men">men</a></button>
+						<div class="input-group flex-nowrap">
+							<form action="/home/category/all">
+								<button id="all" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*" name="category" value="all"><a style="color: white;" href="/home/category/all#category">all</a></button>
 							</form>
+							<form action="/home/category/women">
+								<button id="women" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter=".women" type="submit" name="category" value="women"><a style="color: white;" href="/home/category/women#category">women</a></button>
+							</form>
+							<form action="/home/category/accessories">
+								<button id="accessories" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter=".accessories" type="submit" name="category" value="accessories"><a style="color: white;" href="/home/category/accessories#category">accessories</a></button>
+							</form>
+							<form action="/home/category/men">
+								<button id="men" class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter=".men" type="submit" name="category" value="men"><a style="color: white;" href="/home/category/men#category">men</a></button>
+							</form>
+						</div>
 							<h3>{{ name_category }}</h3>							
 						</ul>
 					</div>

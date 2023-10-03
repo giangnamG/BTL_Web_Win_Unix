@@ -13,7 +13,11 @@ class homeAdminController{
 
     public function index(){
         $permistion = $_SESSION['logged'];
-        view::view('admin/adminHome.twig.php',['permistion'=>$permistion]);
+        view::view('admin/adminHome.twig.php',
+            [
+                'permistion'=>$permistion,
+                'page'=>'admin'
+            ]);
     }
 
 }

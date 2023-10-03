@@ -42,6 +42,24 @@ class homeController{
         }
         die();
     }
+
+    public function search(){
+        if(isset($_POST['search'])){
+            $search = $_POST['search'];
+            $products = DB::search("products",['title','like',$search]);
+            if($products){
+                view::view('user/home.twig.php',
+                    [
+                        'permistion'=>$_SESSION['logged'],
+                        'username'=>$_SESSION['username'],
+                        'products'=>$products,
+                        'name_category'=>null,
+                        'search_name'=>$search
+                    ]);
+            }
+            http_response_code(500);
+        }
+    }
 }
 
 ?>

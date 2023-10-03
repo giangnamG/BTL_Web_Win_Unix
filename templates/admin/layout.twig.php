@@ -21,6 +21,9 @@
         position: inherit;
         text-transform: unset;
     }
+    .users{
+            margin-left: 100px;
+    }
     </style>
         <!-- Scripts -->
 </head>
@@ -58,8 +61,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/admin/products">Mặt hàng trong kho</a>
-                    <a class="dropdown-item" href="">Quản lý kho</a>
-                    <a class="dropdown-item" href="/admin/add_product">Nhập hàng</a>
+                    <a class="dropdown-item" href="/admin/products/create">Nhập hàng</a>
                 </div>
             </li>
             
