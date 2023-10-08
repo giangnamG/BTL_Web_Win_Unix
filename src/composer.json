@@ -1,0 +1,17 @@
+{
+    "name": "root/window-unix",
+    "autoload": {
+        "psr-4": {
+            "Root\\WindowUnix\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyen Giang Nam",
+            "email": "kow.giangnam@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.7"
+    }
+}

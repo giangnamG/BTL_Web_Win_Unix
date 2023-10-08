@@ -1,0 +1,81 @@
+2023/10/07 00:10:14 [error] 22#22: *59 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 01:40:33 [error] 22#22: *119 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 04:28:32 [error] 22#22: *213 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 04:50:52 [error] 22#22: *255 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 05:19:27 [error] 22#22: *304 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:31:41 [error] 22#22: *430 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:31:44 [error] 22#22: *432 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /wp/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:31:49 [error] 22#22: *434 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /new/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:31:52 [error] 22#22: *436 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /old/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:31:53 [error] 22#22: *438 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /wordpress/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:31:58 [error] 22#22: *440 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /test/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:32:02 [error] 22#22: *442 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /blog/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:32:06 [error] 22#22: *444 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /cms/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:32:09 [error] 22#22: *446 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /web/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:32:11 [error] 22#22: *448 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /backup/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:32:14 [error] 22#22: *450 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /site/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 10:32:21 [error] 22#22: *452 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /oldsite/wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 13:53:23 [error] 22#22: *563 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 20:55:43 [error] 22#22: *682 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/07 22:57:49 [error] 22#22: *739 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/08 09:28:15 [error] 22#22: *981 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET //xmlrpc.php?rsd HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/08 12:09:29 [error] 22#22: *1115 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /wp-login.php HTTP/1.1", upstream: "fastcgi://172.22.0.3:9000", host: "z0k3r.online"
+2023/10/08 13:07:03 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/10/08 13:07:03 [notice] 22#22: gracefully shutting down
+2023/10/08 13:07:03 [notice] 22#22: exiting
+2023/10/08 13:07:03 [notice] 22#22: exit
+2023/10/08 13:07:03 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/10/08 13:07:03 [notice] 1#1: worker process 22 exited with code 0
+2023/10/08 13:07:03 [notice] 1#1: exit
+2023/10/08 13:23:42 [notice] 1#1: using the "epoll" event method
+2023/10/08 13:23:42 [notice] 1#1: nginx/1.25.2
+2023/10/08 13:23:42 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/10/08 13:23:42 [notice] 1#1: OS: Linux 5.15.0-73-generic
+2023/10/08 13:23:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/10/08 13:23:42 [notice] 1#1: start worker processes
+2023/10/08 13:23:42 [notice] 1#1: start worker process 22
+2023/10/08 13:25:35 [notice] 1#1: signal 1 (SIGHUP) received from 36, reconfiguring
+2023/10/08 13:25:35 [notice] 1#1: reconfiguring
+2023/10/08 13:25:35 [notice] 1#1: using the "epoll" event method
+2023/10/08 13:25:35 [notice] 1#1: start worker processes
+2023/10/08 13:25:35 [notice] 1#1: start worker process 37
+2023/10/08 13:25:35 [notice] 22#22: gracefully shutting down
+2023/10/08 13:25:35 [notice] 22#22: exiting
+2023/10/08 13:25:35 [notice] 22#22: exit
+2023/10/08 13:25:35 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2023/10/08 13:25:35 [notice] 1#1: worker process 22 exited with code 0
+2023/10/08 13:25:35 [notice] 1#1: signal 29 (SIGIO) received
+2023/10/08 13:25:37 [error] 37#37: *90 open() "/usr/share/nginx/html/home" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /home HTTP/1.1", host: "www.z0k3r.online", referrer: "https://www.z0k3r.online/admin"
+2023/10/08 13:25:40 [error] 37#37: *93 open() "/usr/share/nginx/html/login" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /login HTTP/1.1", host: "www.z0k3r.online"
+2023/10/08 13:25:52 [notice] 1#1: signal 1 (SIGHUP) received from 44, reconfiguring
+2023/10/08 13:25:52 [notice] 1#1: reconfiguring
+2023/10/08 13:25:52 [notice] 1#1: using the "epoll" event method
+2023/10/08 13:25:52 [notice] 1#1: start worker processes
+2023/10/08 13:25:52 [notice] 1#1: start worker process 45
+2023/10/08 13:25:52 [notice] 37#37: gracefully shutting down
+2023/10/08 13:25:52 [notice] 37#37: exiting
+2023/10/08 13:25:52 [notice] 37#37: exit
+2023/10/08 13:25:52 [notice] 1#1: signal 17 (SIGCHLD) received from 37
+2023/10/08 13:25:52 [notice] 1#1: worker process 37 exited with code 0
+2023/10/08 13:25:52 [notice] 1#1: signal 29 (SIGIO) received
+2023/10/08 17:10:59 [error] 45#45: *744 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:10:59 [error] 45#45: *744 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:11:55 [error] 45#45: *746 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:11:55 [error] 45#45: *746 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:11:59 [error] 45#45: *748 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:11:59 [error] 45#45: *748 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:17:33 [error] 45#45: *752 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:17:33 [error] 45#45: *752 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:18:38 [error] 45#45: *756 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:18:38 [error] 45#45: *756 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:31:59 [error] 45#45: *768 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:31:59 [error] 45#45: *768 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:51:22 [error] 45#45: *773 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 17:51:22 [error] 45#45: *773 open() "/usr/share/nginx/html/50x.html" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /templates/assets/avatar/shell.php HTTP/1.1", upstream: "fastcgi://172.23.0.4:9000", host: "www.z0k3r.online"
+2023/10/08 18:09:54 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/10/08 18:09:54 [notice] 45#45: gracefully shutting down
+2023/10/08 18:09:54 [notice] 45#45: exiting
+2023/10/08 18:09:54 [notice] 45#45: exit
+2023/10/08 18:09:54 [notice] 1#1: signal 17 (SIGCHLD) received from 45
+2023/10/08 18:09:54 [notice] 1#1: worker process 45 exited with code 0
+2023/10/08 18:09:54 [notice] 1#1: exit
