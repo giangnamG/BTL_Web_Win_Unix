@@ -48,22 +48,15 @@ class productController{
                   'nha_cung_cap' => $product['provider'],
                   'quantity' => $product['quantity'],
                 ]);
-            header('location: /admin/products/create');
-            die();
+            die('<script>window.location="/admin/products/create"</script>');
         }
     }
 
     function upload_file(){
-        $targetDirectory = $_SERVER['DOCUMENT_ROOT']."/templates/assets/images/";
+        $targetDirectory = getcwd()."/templates/assets/images/";
         $targetFile = $targetDirectory . basename($_FILES["image"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
-        // Kiểm tra xem tệp đã tồn tại chưa
-        // if (file_exists($targetFile)) {
-        //     echo "Tệp đã tồn tại.";
-        //     $uploadOk = 0;
-        // }
-        // Kiểm tra kích thước tệp
         if ($_FILES["image"]["size"] > 5000000) {
             echo '<br>'."Tệp quá lớn.";
             $uploadOk = 0;
@@ -78,18 +71,13 @@ class productController{
         if ($uploadOk == 0) {
             echo '<br>'."Tệp của bạn không được tải lên.";
         } else {
-            $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/templates/assets/images/';
-            echo $_SERVER['DOCUMENT_ROOT'];
-
-            if (is_dir($upload_dir) && is_writable($upload_dir)) {
+            $upload_dir = getcwd() . '/templates/assets/images/';
+            echo $upload_dir;
                 // do upload logic here
-                if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
-                    return basename($_FILES["image"]["name"]);
-                } else {
-                    echo '<br>'."Có lỗi xảy ra khi tải lên tệp: ".htmlspecialchars(basename($_FILES["image"]["name"]));
-            }
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
+                return basename($_FILES["image"]["name"]);
             } else {
-                echo 'Upload directory is not writable, or does not exist.';
+                echo '<br>'."Có lỗi xảy ra khi tải lên tệp: ".htmlspecialchars(basename($_FILES["image"]["name"]));
             }
         }
         die();

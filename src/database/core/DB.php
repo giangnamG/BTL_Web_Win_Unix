@@ -122,7 +122,7 @@ class DB{
         $model = "models\\".$tableName;
         $filable = $model::filable();
 
-        var_dump($filable);
+        // var_dump($filable);
 
         $columns = implode('`,`', $filable); // Chuyển danh sách các trường thành chuỗi
         $data = implode('\',\'',$data);
@@ -164,7 +164,7 @@ class DB{
             $q = $arg[0]." = :".$arg[0];
             $args[":$arg[0]"] = $arg[2];
             $sql .= $q;  
-            if(!empty($logic) && $i < $cnt){
+            if($logic != '' && $i < $cnt){
                 $sql .= " ".$logic." ";
             }
             $i++;
@@ -175,11 +175,36 @@ class DB{
             self::select_db($conn);
             $stmt = $conn->prepare($sql);
             $stmt->execute($args);
-            return true;
         }catch(PDOException $e){
-            return false;
+            die("Connection failed: " . $e->getMessage()); 
         }
     } 
+
+    public static function delete($table,$where){
+        $sql = "delete from $table where ";
+        $args = [];
+        $i = 1;
+        $cnt = count($where);
+        foreach( $where as $arg)
+        {
+            $q = $arg[0]." = :".$arg[0];
+            $args[":$arg[0]"] = $arg[2];
+            $sql .= $q;  
+            if($logic != '' && $i < $cnt){
+                $sql .= " ".$logic." ";
+            }
+            $i++;
+        }
+        try{
+            $conn = DB::connect();
+            self::select_db($conn);
+            $stmt = $conn->prepare($sql);
+            $stmt->execute($args);
+        }catch(PDOExecption $e){
+            die("Connection failed: " . $e->getMessage()); 
+        }
+
+    }
 }
 
 ?>

@@ -51,9 +51,9 @@
                                 </td>
                                 <td style="padding-top: 12px;">
                                     <select 
-                                        {% if user.username == current_user or permision == 'staff' %} 
-                                            disabled
-                                        {% endif %}
+                                    {% if user.username == current_user or permistion == 'staff' %}
+                                        disabled
+                                    {% endif %}
                                     class="form-control category-select" style="width: 75px;" name="change_role" id="role" onchange="this.form.submit()">
                                         <option value="{{ user.role }}">{{ user.role }}</option>
                                         {% for role in roles %}
@@ -65,11 +65,24 @@
                                 </td>
                                 <input type="hidden" value="{{ user.id }}" name="user_id">
                             </form>
-                            <form action="/admin/user/edit" method="POST">
-                                <td>
+                            <form action="/admin/user/delete" method="POST">
+                                <td style="width: 70px;padding-right: 0px;">
                                     <input type="hidden" value="{{ user.id }}" name="user_id">
-                                    <button type="submit" name="delete_user" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><a href=""><i class="fa fa-trash"></i></a></button>
-                                    <button type="submit" name="edit_user" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><a href="/admin?page=edit_user"><i class="fa fa-edit"></i> </a></button>
+                                    <button
+                                    {% if user.username == current_user or permistion == 'staff' %}
+                                        disabled
+                                    {% endif %}
+                                    type="submit" name="delete_user" class="btn btn-outline-info btn-lg btn-circle btn-circle ml-2"><a href="#"><i class="fa fa-trash"></i></a></button>
+                                </td>
+                            </form>
+                            <form action="/admin/user/edit" method="POST">
+                                <td style="width: 70px;padding-left: 0px;">
+                                    <input type="hidden" value="{{ user.id }}" name="user_id">
+                                    <button 
+                                    {% if permistion == 'staff' %}
+                                        disabled
+                                    {% endif %}
+                                    type="submit" name="edit_user" class="btn btn-outline-info btn-lg btn-circle btn-circle ml-2"><a href="#"><i class="fa fa-edit"></i> </a></button>
                                 </td>
                             </form>
                         </tr>

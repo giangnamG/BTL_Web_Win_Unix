@@ -35,6 +35,7 @@ Route::post('/admin/user/edit','controllers\admin\userController@show'); // get 
 Route::get('/admin/user/edit','controllers\admin\userController@show');
 Route::post('/admin/user/update','controllers\admin\userController@update');
 Route::post('/admin/user/changePermistion','controllers\admin\userController@changePermistion');
+Route::post('/admin/user/delete','controllers\admin\userController@delete');
 
 Route::get('/admin/products','controllers\admin\productController@index');
 Route::get('/admin/products/create','controllers\admin\productController@create'); //show form 

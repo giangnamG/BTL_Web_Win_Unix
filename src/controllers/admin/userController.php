@@ -59,7 +59,7 @@ class userController{
                 $user_id = $_SESSION['edit_user_id'];
                 $phone = $_POST['phone'];
                 $email = $_POST['email'];
-                $check = DB::update("users",
+                DB::update("users",
                     [
                         ['phone','=',$phone],
                         ['email','=',$email]
@@ -69,11 +69,7 @@ class userController{
                     ],
                     'and'
                 );
-                if($check)
-                {
-                    header('location: /admin/user/edit');
-                    die();
-                }
+                die('<script>window.location="/admin/user/edit"</script>');
             }
         }
     }
@@ -83,7 +79,7 @@ class userController{
             $user_id = $_POST['user_id'];
             $new_role = $_POST['change_role'];
             
-            $check = DB::update("users",
+            DB::update("users",
             [
                 ['role','=',$new_role]
             ],
@@ -91,11 +87,14 @@ class userController{
                 ['id','=',$user_id]
             ],
             null);
-            if($check){
-                header('location: /admin/users');
-                die();
-            }
+            die('<script>window.location="/admin/users"</script>');
         }
+    }
+    public function delete(){
+        DB::delete("users", [
+            ['id','=',$_POST['user_id']]
+        ]);
+        die('<script>window.location="/admin/users"</script>');
     }
 }
 

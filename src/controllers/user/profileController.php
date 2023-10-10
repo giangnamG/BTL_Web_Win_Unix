@@ -26,7 +26,7 @@ class profileController{
     public function uploadfile(){
         if(isset($_FILES['avatar'])){
             $avatar = $_FILES['avatar'];
-            echo 'filename: '.basename($avatar['name']).'<br>';
+            // echo 'filename: '.basename($avatar['name']).'<br>';
             $target_dir = getcwd().'/templates/assets/avatar/';
             if ($avatar['size'] <= 5000000){
 
@@ -41,11 +41,8 @@ class profileController{
                         if (!file_exists($target_dir)){
                             if (is_uploaded_file($avatar['tmp_name'])){
                                 if (move_uploaded_file($avatar['tmp_name'],$target_dir)){
-                                    echo '<script>alert("upload thanh cong")</script>';
-                                    return basename($avatar['name']);
-                                }else{
-                                    echo '<script>alert("upload thanh cong")</script>';
-                                }
+                                    echo 'upload thanh cong';
+                                }else
                                     echo ("upload Không thành công");
                             }else
                                 echo ("Some thing went wrong !!");
@@ -57,27 +54,44 @@ class profileController{
                     echo ("Chỉ chấp nhận extension: png, jpg, gif");
             }else
                 echo ('Chỉ chấp nhận file < 5MB');
-            return false;
         }
     }
     public function store(){
-        echo '<pre>';
-        
-        if (isset($_POST['submit'])){
-            $avatar = self::uploadfile();
-            if ($avatar)
-                DB::update("users",[
+        $is_upload = 0;
+        if (isset($_FILES['avatar']) && $_FILES['avatar']['name']!=''){
+            $is_upload = 1;
+            self::uploadfile();
+        }
+
+        if ($is_upload === 1){
+            DB::update("users",
+                [
                     ['fullname','=',$_POST['fullname']],
+                    ['phone','=',$_POST['phone']],
                     ['email','=',$_POST['email']],
-                    ['avatar','=',$avatar],
+                    ['avatar','=','/templates/assets/avatar/'.basename($_FILES['avatar']['name'])],
                     ['Updated','=',date('Y-m-d H:i:s')]
                 ],
-                ['username','=',$_SESSION['username']],
-                'and');
-            else
-                echo '<script>alert("update false")</script>';
+                [
+                    ['username','=',$_SESSION['username']]
+                ],
+                'and'
+            );
+        }else if ($is_upload === 0){
+            DB::update("users",
+                [
+                    ['fullname','=',$_POST['fullname']],
+                    ['phone','=',$_POST['phone']],
+                    ['email','=',$_POST['email']],
+                    ['Updated','=',date('Y-m-d H:i:s')]
+                ],
+                [
+                    ['username','=',$_SESSION['username']]
+                ],
+                'and'
+            );
         }
-        header('location: /user/profile');
+        echo '<script>window.location="/user/profile"</script>';
         die();
     }
 

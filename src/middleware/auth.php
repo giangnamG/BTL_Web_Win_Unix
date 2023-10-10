@@ -15,33 +15,34 @@ class auth {
 
     public static function auth()
     {
-        self::checkLogged();
         if(!self::is_user() && !self::is_staff() && !self::is_admin()) {
             header('location: /login');
             die();
         }
-        if(strpos(strtolower($_SERVER['REQUEST_URI']),"admin")){
+        if(strpos(strtolower($_SERVER['REQUEST_URI']),"admin")!==false){
 
-            if(self::is_user())
+            if(self::is_user() == 1)
             {
                 header('location: /home');
                 die();
 
-            }else if(self::is_staff())
+            }else if(self::is_staff() == 1)
             {
-                if(strpos(strtolower($_SERVER['REQUEST_URI']),"user"))
+                echo 1;
+                if(strpos(strtolower($_SERVER['REQUEST_URI']),"/admin/user/")!==false)
                 {
                     $except = [
-                        'edit',
-                        'update',
-                        'delete'
+                        '/admin/user/edit',
+                        '/admin/user/update',
+                        '/admin/user/changePermistion',
+                        '/admin/user/delete'
                     ];
 
                     foreach($except as $each)
-                        if(strpos(strtolower($_SERVER['REQUEST_URI']),$each))
+                        if(strpos($_SERVER['REQUEST_URI'],$each)!==false)
                         {   
-                            header('location: /home/users');
-                            die();
+                            echo('<script>alert("chỉ admin mới có quyền")</script>');
+                            die('<script>window.location="/admin/users"</script>');
                         }
                 }
             }
